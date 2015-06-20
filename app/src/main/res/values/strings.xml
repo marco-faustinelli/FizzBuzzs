@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">FizzBuzzs</string>
+    <string name="games_title">FizzBuzz Games</string>
+
+    <!-- from android-fizz-buzz -->
+    <string name="fizzbuzz_result">Fizzbuzz Result</string>
+    <string name="number">Insert a number</string>
+    <string name="insert_number">Fizz Buzz</string>
+    <string name="button_send">FizzBuzz it!</string>
+
+    <string name="title_activity_display_message">Fizz Buzz results</string>
+    <string name="new_game">New Game</string>
+    <string name="delete_game">Delete Game</string>
+
+</resources>

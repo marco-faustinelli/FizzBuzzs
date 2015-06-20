@@ -1,0 +1,2 @@
+include ':app'//, ':fizzbuzz'
+//project(':fizzbuzz').projectDir = new File(settingsDir, '../fizz-buzz-android/app')

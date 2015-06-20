@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/number"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:hint="@string/number"
+        android:inputType="number"
+        android:digits="1234567890"
+        android:singleLine="true"
+        android:textSize="36sp"
+        android:gravity="center_vertical|center_horizontal" />
+
+    <Button
+        android:text="@string/button_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="calculateFizzBuzz"
+        android:textSize="36sp"
+        android:gravity="center_vertical|center_horizontal" />
+
+
+</LinearLayout>
