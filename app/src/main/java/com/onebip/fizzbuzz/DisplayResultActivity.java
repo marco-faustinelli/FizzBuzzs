@@ -7,7 +7,6 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import org.faustinelli.android.fizzbuzzs.R;
-import org.faustinelli.android.fizzbuzzs.model.FBGames;
 
 
 public class DisplayResultActivity extends Activity {
@@ -41,15 +40,5 @@ public class DisplayResultActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-
-    /**
-     * Added by Marco!!
-     */
-    @Override
-    public void onPause() {
-        super.onPause();
-        FBGames.get(getApplicationContext()).saveGames();
     }
 }

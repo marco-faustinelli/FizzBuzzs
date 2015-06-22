@@ -3,6 +3,7 @@ package org.faustinelli.android.fizzbuzzs;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
+import android.util.Log;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -57,7 +58,7 @@ public class FBGamesListFragment extends ListFragment {
         FBGame game = ((FBGameAdapter) getListAdapter()).getItem(position);
 
         Intent i = new Intent(getActivity(), InsertNumberActivity.class);
-        i.putExtra(InsertNumberActivity.EXTRA_INPUT, game.getNumber());
+        i.putExtra(FBGame.EXTRA_GAME_ID, game.getId());
         startActivity(i); // why not startActivityForResult ????
     }
 
@@ -127,10 +128,12 @@ public class FBGamesListFragment extends ListFragment {
             FBGame game = getItem(position);
 
             TextView idTextView = (TextView)listItemView.findViewById(R.id.list_item_id);
-            idTextView.setText(game.getId().toString());
+            String s = game.getId().toString();
+            idTextView.setText("gameId: " + s.substring(s.length() - 6));
 
             TextView numberTextView = (TextView)listItemView.findViewById(R.id.list_item_number);
-            numberTextView.setText(game.getNumber());
+            Log.d(TAG, "---------------------------------> " + game.getNumber());
+            numberTextView.setText("last number: "+ game.getNumber());
 
             return listItemView;
         }

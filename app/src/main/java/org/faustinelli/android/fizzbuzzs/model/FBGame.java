@@ -20,7 +20,6 @@ public class FBGame {
     private String mNumber;
 
     public FBGame() {
-
         mId = UUID.randomUUID();
     }
 

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.Log;
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 /**
  * Created by muzietto on 20/06/15.
@@ -53,11 +54,20 @@ public class FBGames {
     public boolean saveGames() {
         try {
             mSerializer.saveGames(mGames);
-            Log.d(TAG, "crimes saved to file");
+            Log.d(TAG, "games saved to file");
             return true;
         } catch (Exception e) {
-            Log.e(TAG, "error saving crimes: ", e);
+            Log.e(TAG, "error saving games: ", e);
             return false;
         }
+    }
+
+    public FBGame getGame(UUID gameId) {
+        for (FBGame c : mGames) {
+            if (c.getId().equals(gameId)) {
+                return c;
+            }
+        }
+        return null;
     }
 }
