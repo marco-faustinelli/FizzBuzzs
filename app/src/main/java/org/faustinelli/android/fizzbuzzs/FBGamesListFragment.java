@@ -32,7 +32,9 @@ public class FBGamesListFragment extends ListFragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+
         setHasOptionsMenu(true);
 
         getActivity().setTitle("FizzBuzz Games");

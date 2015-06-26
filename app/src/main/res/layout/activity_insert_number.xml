@@ -1,29 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+
+              android:orientation="vertical">
 
     <EditText
         android:id="@+id/number"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:layout_weight="1"
+        android:digits="1234567890"
+        android:gravity="center_vertical|center_horizontal"
         android:hint="@string/number"
         android:inputType="number"
-        android:digits="1234567890"
         android:singleLine="true"
-        android:textSize="36sp"
-        android:gravity="center_vertical|center_horizontal" />
+        android:textSize="36sp"/>
 
-    <Button
-        android:text="@string/button_send"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:onClick="calculateFizzBuzz"
+            android:text="@string/button_send"
+            android:textSize="36sp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:onClick="buyFizz"
+            android:text="buy Fizz"
+            android:textSize="36sp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:onClick="buyBuzz"
+            android:text="buy Buzz"
+            android:textSize="36sp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:onClick="buyFizzBuzz"
+            android:text="buy FizzBuzz"
+            android:textSize="36sp"/>
+
+    </LinearLayout>
+
+    <com.onebip.onedk.Banner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:onClick="calculateFizzBuzz"
-        android:textSize="36sp"
-        android:gravity="center_vertical|center_horizontal" />
-
-
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        app:bannerId="2a7bab42-cab3-4c8c-ad79-8bd2cc873d98"/>
 </LinearLayout>

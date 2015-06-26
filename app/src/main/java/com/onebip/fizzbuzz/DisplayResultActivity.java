@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.onebip.onedk.OneDk;
+
 import org.faustinelli.android.fizzbuzzs.R;
 
 
@@ -41,4 +43,16 @@ public class DisplayResultActivity extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
-}
+
+    /**
+     * Added by Marco!!
+     */
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        // interstitial
+        if (Math.random() < 0.5) {
+            OneDk.getInstance().showInterstitial(this, "f8ceafff-b80f-45cc-b00e-a22891e9cb1f");
+        }
+    }}
